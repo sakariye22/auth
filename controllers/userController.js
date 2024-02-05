@@ -22,7 +22,7 @@ async function registerUser(req, res) {
   }
 };
 
-/*
+
 async function loginUser(req, res) {
   try {
     const { email, password } = req.body;
@@ -45,37 +45,37 @@ async function loginUser(req, res) {
     res.status(500).json({ message: "Error logging in", error: error.message });
   }
 }
-*/
 
 
-async function loginUser(req, res) {
-  try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ email });
 
-    if (!user) {
-      return res.status(401).json({ message: "Invalid email or password" });
-    }
+// async function loginUser(req, res) {
+//   try {
+//     const { email, password } = req.body;
+//     const user = await User.findOne({ email });
 
-    const isMatch = await bcrypt.compare(password, user.password);
+//     if (!user) {
+//       return res.status(401).json({ message: "Invalid email or password" });
+//     }
 
-    if (!isMatch) {
-      return res.status(401).json({ message: "Invalid email or password" });
-    }
+//     const isMatch = await bcrypt.compare(password, user.password);
 
-    // Construct user data for response
-    const userData = {
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      phoneNumber: user.phoneNumber,
-      // Include any other user fields you want to return
-    };
+//     if (!isMatch) {
+//       return res.status(401).json({ message: "Invalid email or password" });
+//     }
 
-    res.status(200).json({ message: "User logged in successfully", user: userData });
-  } catch (error) {
-    res.status(500).json({ message: "Error logging in", error: error.message });
-  }
-}
+//     // Construct user data for response
+//     const userData = {
+//       _id: user._id,
+//       name: user.name,
+//       email: user.email,
+//       phoneNumber: user.phoneNumber,
+//       // Include any other user fields you want to return
+//     };
+
+//     res.status(200).json({ message: "User logged in successfully", user: userData });
+//   } catch (error) {
+//     res.status(500).json({ message: "Error logging in", error: error.message });
+//   }
+// }
 
 module.exports = { registerUser,loginUser };

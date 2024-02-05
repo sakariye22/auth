@@ -25,7 +25,7 @@ async function registerDriver(req, res) {
     res.status(500).json({ message: "Error registering driver", error: error.message });
   }
 }
-/*
+
 async function loginDriver(req, res) {
   try {
     const { email, password } = req.body;
@@ -51,43 +51,42 @@ async function loginDriver(req, res) {
     res.status(500).json({ message: "Error logging in", error: error.message });
   }
 }
-*/
 
 
 
-async function loginDriver(req, res) {
-  try {
-    const { email, password } = req.body;
-    const driver = await Driver.findOne({ email });
+// async function loginDriver(req, res) {
+//   try {
+//     const { email, password } = req.body;
+//     const driver = await Driver.findOne({ email });
 
-    if (!driver) {
-      return res.status(401).json({ message: "Invalid email or password" });
-    }
+//     if (!driver) {
+//       return res.status(401).json({ message: "Invalid email or password" });
+//     }
 
-    const isMatch = await bcrypt.compare(password, driver.password);
+//     const isMatch = await bcrypt.compare(password, driver.password);
 
-    if (!isMatch) {
-      return res.status(401).json({ message: "Invalid email or password" });
-    }
+//     if (!isMatch) {
+//       return res.status(401).json({ message: "Invalid email or password" });
+//     }
 
-    // Construct driver data for response
-    const driverData = {
-      _id: driver._id,
-      name: driver.name,
-      email: driver.email,
-      phoneNumber: driver.phoneNumber,
-      licenseNumber: driver.licenseNumber,
-      vehicle: driver.vehicle,
-      isActive: driver.isActive,
+//     // Construct driver data for response
+//     const driverData = {
+//       _id: driver._id,
+//       name: driver.name,
+//       email: driver.email,
+//       phoneNumber: driver.phoneNumber,
+//       licenseNumber: driver.licenseNumber,
+//       vehicle: driver.vehicle,
+//       isActive: driver.isActive,
      
-    };
+//     };
 
-    res.status(200).json({ message: "Driver logged in successfully", driver: driverData });
-  } catch (error) {
-    res.status(500).json({ message: "Error logging in", error: error.message });
-  }
-}
+//     res.status(200).json({ message: "Driver logged in successfully", driver: driverData });
+//   } catch (error) {
+//     res.status(500).json({ message: "Error logging in", error: error.message });
+//   }
+// }
 
 module.exports = { registerDriver, loginDriver };
 
-//module.exports = { registerDriver };
+// //module.exports = { registerDriver };
