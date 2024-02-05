@@ -12,8 +12,15 @@ const rideSchema = new mongoose.Schema({
     required: true,
   },
   pickupLocation: {
-    type: String,
-    required: true,
+    type: {
+      type: String,
+      default: 'Point',
+      required: true,
+    },
+    coordinates: {
+      type: [Number],
+      required: true,
+    }
   },
   dropoffLocation: {
     type: String,
@@ -34,19 +41,16 @@ const rideSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  // In your rideSchema
-pickupLocation: {
-  type: { type: String, default: 'Point' },
-  coordinates: [Number], // [longitude, latitude]
-  required: true
-},
-// Optionally, if you want to track the driver's location for assignment
-driverLocation: {
-  type: { type: String, default: 'Point' },
-  coordinates: [Number], // This would be set when a driver accepts the ride
-  required: false // Only required when a driver has been assigned
-},
-
+  driverLocation: {
+    type: {
+      type: String,
+      default: 'Point',
+    },
+    coordinates: {
+      type: [Number],
+      required: false, 
+    }
+  },
 });
 
 module.exports = mongoose.model('Ride', rideSchema);
