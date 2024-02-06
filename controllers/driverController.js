@@ -43,15 +43,18 @@ async function loginDriver(req, res) {
 
     const token = jwt.sign({ driverId: driver._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     console.log('Token created at:', new Date().toISOString());
-    console.log('Token expires at:', new Date(Date.now() + 3600000).toISOString()); // 1 hour from now
+    console.log('Token expires at:', new Date(Date.now() + 3600000).toISOString()); 
     
 
     res.status(200).json({ token });
   } catch (error) {
     res.status(500).json({ message: "Error logging in", error: error.message });
   }
+};
+function logoutDriver(req, res) {
+  console.log('The token has expired or the user logged out');
+  res.status(200).json({ message: 'The token has expired or the user logged out. Please handle logout on the client side.' });
 }
-
 
 
 // async function loginDriver(req, res) {
@@ -87,6 +90,6 @@ async function loginDriver(req, res) {
 //   }
 // }
 
-module.exports = { registerDriver, loginDriver };
+module.exports = { registerDriver, loginDriver , logoutDriver};
 
 // //module.exports = { registerDriver };
