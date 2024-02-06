@@ -1,0 +1,377 @@
+[debug] [2024-02-06T20:47:59.866Z] ----------------------------------------------------------------------
+[debug] [2024-02-06T20:47:59.868Z] Command:       /usr/local/bin/firebase /Users/zaki/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase emulators:start --only functions
+[debug] [2024-02-06T20:47:59.869Z] CLI Version:   13.0.2
+[debug] [2024-02-06T20:47:59.869Z] Platform:      darwin
+[debug] [2024-02-06T20:47:59.870Z] Node Version:  v18.5.0
+[debug] [2024-02-06T20:47:59.873Z] Time:          Tue Feb 06 2024 21:47:59 GMT+0100 (Central European Standard Time)
+[debug] [2024-02-06T20:47:59.873Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-06T20:48:00.046Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-06T20:48:00.047Z] > authorizing via signed-in user (sakariyassaadaq@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-02-06T20:48:00.464Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-06T20:48:00.466Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-02-06T20:48:00.487Z] [hub] writing locator at /var/folders/y3/959kxsqs3tq53k92sl8pkqr40000gn/T/hub-the-auth-backend.json
+[debug] [2024-02-06T20:48:00.778Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-06T20:48:00.782Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-06T20:48:00.783Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-02-06T20:48:00.788Z] defaultcredentials: writing to file /Users/zaki/.config/firebase/sakariyassaadaq_gmail_com_application_default_credentials.json
+[debug] [2024-02-06T20:48:00.795Z] Setting GAC to /Users/zaki/.config/firebase/sakariyassaadaq_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/zaki/.config/firebase/sakariyassaadaq_gmail_com_application_default_credentials.json"}}
+[debug] [2024-02-06T20:48:00.802Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-auth-backend/adminSdkConfig [none]
+[debug] [2024-02-06T20:48:01.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-auth-backend/adminSdkConfig 200
+[debug] [2024-02-06T20:48:01.140Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-auth-backend/adminSdkConfig {"projectId":"the-auth-backend","storageBucket":"the-auth-backend.appspot.com"}
+[debug] [2024-02-06T20:48:01.170Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-02-06T20:48:01.170Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-02-06T20:48:01.170Z] Starting Emulator UI with command {"binary":"node","args":["/Users/zaki/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/zaki/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-02-06T20:48:01.428Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-02-06T20:48:01.429Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions\" for Cloud Functions..."}}
+[debug] [2024-02-06T20:48:01.466Z] Validating nodejs source
+[debug] [2024-02-06T20:48:02.597Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-06T20:48:02.598Z] Building nodejs source
+[debug] [2024-02-06T20:48:02.598Z] Failed to find version of module node: reached end of search path /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-06T20:48:02.608Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-06T20:48:02.643Z] Found firebase-functions binary at '/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8351
+
+[error] node:events:515
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8351
+    at Server.setupListenHandle [as _listen2] (node:net:1422:16)
+    at listenInCluster (node:net:1470:12)
+    at Server.listen (node:net:1558:7)
+    at Function.listen (/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js:22:5)
+    at Module._compile (node:internal/modules/cjs/loader:1112:14)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1166:10)
+    at Module.load (node:internal/modules/cjs/loader:988:32)
+    at Module._load (node:internal/modules/cjs/loader:834:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1449:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 8351
+}
+
+[error] 
+Node.js v18.5.0
+
+[debug] [2024-02-06T20:48:04.137Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8351/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8351 {"message":"request to http://localhost:8351/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8351","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[error] ⬢  functions: Failed to load function definition from source: FetchError: request to http://127.0.0.1:8351/__/functions.yaml failed, reason: socket hang up {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FetchError: request to http://127.0.0.1:8351/__/functions.yaml failed, reason: socket hang up"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-02-06T20:51:48.048Z] File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers"}}
+[debug] [2024-02-06T20:51:49.072Z] Validating nodejs source
+[debug] [2024-02-06T20:51:50.598Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-06T20:51:50.602Z] Building nodejs source
+[debug] [2024-02-06T20:51:50.604Z] Failed to find version of module node: reached end of search path /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-06T20:51:50.623Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-06T20:51:50.641Z] Found firebase-functions binary at '/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules/.bin/firebase-functions'
+[debug] [2024-02-06T20:51:50.692Z] File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers"}}
+[info] Serving at port 8255
+
+[debug] [2024-02-06T20:51:51.710Z] Validating nodejs source
+[debug] [2024-02-06T20:51:53.150Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-06T20:51:53.153Z] Building nodejs source
+[debug] [2024-02-06T20:51:53.153Z] Failed to find version of module node: reached end of search path /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-06T20:51:53.188Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-06T20:51:53.199Z] Found firebase-functions binary at '/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules/.bin/firebase-functions'
+[error] /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js:21
+/*const port = process.env.PORT || 3300;
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1040:15)
+    at Module._compile (node:internal/modules/cjs/loader:1076:27)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1166:10)
+    at Module.load (node:internal/modules/cjs/loader:988:32)
+    at Module._load (node:internal/modules/cjs/loader:834:12)
+    at Module.require (node:internal/modules/cjs/loader:1012:19)
+    at Module.require (pkg/prelude/bootstrap.js:1851:31)
+    at require (node:internal/modules/cjs/helpers:102:18)
+
+[debug] [2024-02-06T20:51:53.248Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Invalid or unexpected token
+[debug] [2024-02-06T20:51:53.264Z] File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-02-06T20:51:54.268Z] Validating nodejs source
+[debug] [2024-02-06T20:51:55.734Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-06T20:51:55.737Z] Building nodejs source
+[debug] [2024-02-06T20:51:55.738Z] Failed to find version of module node: reached end of search path /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-06T20:51:55.769Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-06T20:51:55.774Z] Found firebase-functions binary at '/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8056
+
+[info] Serving at port 8917
+
+[debug] [2024-02-06T20:51:57.001Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] Connected to MongoDB
+
+[info] Connected to MongoDB
+
+[debug] [2024-02-06T20:51:57.713Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] Connected to MongoDB
+
+[info] Connected to MongoDB
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/the-auth-backend/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/the-auth-backend/us-central1/api)."}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-02-06T20:52:33.129Z] File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers"}}
+[debug] [2024-02-06T20:52:34.141Z] Validating nodejs source
+[debug] [2024-02-06T20:52:35.562Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-06T20:52:35.563Z] Building nodejs source
+[debug] [2024-02-06T20:52:35.564Z] Failed to find version of module node: reached end of search path /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-06T20:52:35.578Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-06T20:52:35.595Z] Found firebase-functions binary at '/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8604
+
+[debug] [2024-02-06T20:52:37.579Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] Connected to MongoDB
+
+[info] Connected to MongoDB
+
+[debug] [2024-02-06T20:52:42.459Z] File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/server.js changed, reloading triggers"}}
+[debug] [2024-02-06T20:52:43.471Z] Validating nodejs source
+[debug] [2024-02-06T20:52:45.002Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-06T20:52:45.004Z] Building nodejs source
+[debug] [2024-02-06T20:52:45.004Z] Failed to find version of module node: reached end of search path /Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-02-06T20:52:45.019Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-06T20:52:45.029Z] Found firebase-functions binary at '/Users/zaki/Library/webb/lia-mapp/overviewMap-17january/backend/auth/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8730
+
+[debug] [2024-02-06T20:52:46.929Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] Connected to MongoDB
+
+[info] Connected to MongoDB
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
