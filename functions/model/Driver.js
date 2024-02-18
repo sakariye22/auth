@@ -30,7 +30,15 @@ const driverSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  lat: {
+    type: Number,
+    required: true,
+  },
+  lng: {
+    type: Number,
+    required: true,
+  },
   // Add timestamps
-  }, { timestamps: true });
-  
+}, { timestamps: true });
+
 module.exports = mongoose.model('Driver', driverSchema);
