@@ -11,20 +11,29 @@ const rideSchema = new mongoose.Schema({
     ref: 'Driver',
     required: true,
   },
-  pickupLocation: {
-    type: {
-      type: String,
-      default: 'Point',
-      required: true,
-    },
-    coordinates: {
-      type: [Number],
-      required: true,
-    }
+  pickupLatitude: {
+    type: Number,
+    required: true, 
+    min: -90,
+    max: 90,
   },
-  dropoffLocation: {
-    type: String,
-    required: true,
+  pickupLongitude: {
+    type: Number,
+    required: true, 
+    min: -180,
+    max: 180,
+  },
+  dropoffLatitude: {
+    type: Number,
+    required: true, 
+    min: -90,
+    max: 90,
+  },
+  dropoffLongitude: {
+    type: Number,
+    required: true, 
+    min: -180,
+    max: 180,
   },
   status: {
     type: String,
@@ -36,21 +45,10 @@ const rideSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  
   createdAt: {
     type: Date,
     default: Date.now,
   },
-  driverLocation: {
-    type: {
-      type: String,
-      default: 'Point',
-    },
-    coordinates: {
-      type: [Number],
-      required: false, 
-    }
-  },
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('Ride', rideSchema);

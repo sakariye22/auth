@@ -23,28 +23,37 @@ async function registerUser(req, res) {
 };
 
 
+
 async function loginUser(req, res) {
   try {
     const { email, password } = req.body;
+    
     const user = await User.findOne({ email });
 
+   
     if (!user) {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
+    
     const isMatch = await bcrypt.compare(password, user.password);
-
     if (!isMatch) {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
+ 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    console.log('Token created at:', new Date().toISOString());
+    console.log('Token expires at:', new Date(Date.now() + 3600000).toISOString());
 
-    res.status(200).json({ token });
+    
+    res.status(200).json({ token, userId: user._id.toString() });
   } catch (error) {
+   
     res.status(500).json({ message: "Error logging in", error: error.message });
   }
-}
+};
+
 
 
 

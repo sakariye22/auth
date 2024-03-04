@@ -46,15 +46,37 @@ async function loginDriver(req, res) {
     console.log('Token expires at:', new Date(Date.now() + 3600000).toISOString()); 
     
 
-    res.status(200).json({ token });
+    res.status(200).json({ token, driverId: driver._id.toString() });
   } catch (error) {
     res.status(500).json({ message: "Error logging in", error: error.message });
   }
 };
+
+async function logoutDriver(req, res) {
+  try {
+    const driverId = req.driverId; 
+
+    const driver = await Driver.findByIdAndUpdate(driverId, { lat: null, lng: null }, { new: true });
+
+    if (!driver) {
+      return res.status(404).send({ message: 'Driver not found.' });
+    }
+
+    console.log('Driver logged out, location cleared.');
+    res.status(200).json({ message: 'Logout successful, location data cleared.' });
+  } catch (error) {
+    console.error('Error during logout:', error);
+    res.status(500).send({ message: 'Server error while processing logout.', error: error.message });
+  }
+};
+
+
+/*
 function logoutDriver(req, res) {
   console.log('The token has expired or the user logged out');
   res.status(200).json({ message: 'The token has expired or the user logged out. Please handle logout on the client side.' });
 }
+*/
 
 
 // async function loginDriver(req, res) {
