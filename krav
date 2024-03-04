@@ -1,1 +1,23 @@
+skulle några typiska krav kunna vara: 
 
+Användarregistrering och inloggning: 
+
+Möjlighet för både förare och användare att registrera sig för konton. 
+
+Möjlighet för registrerade användare att logga in med sina giltiga uppgifter. 
+
+Autentiseringsmekanism: 
+
+Implementering av en säker autentiseringsmekanism, som JWT (JSON Web Tokens), för att utfärda och verifiera autentiserings- och auktoriseringsinformation. 
+
+Säkerhet: 
+
+Rätt hantering av användaruppgifter och lösenord för att förhindra obehörig åtkomst eller dataintrång. 
+
+Felhantering: 
+
+Tillhandahållande av lämpliga felmeddelanden till användare och förare för att underlätta felsökning och användarvänlighet. 
+
+Datavalidering: 
+
+Validering av inmatade data för att säkerställa att den uppfyller kraven och inte innehåller skadlig kod eller ogiltiga tecken. 
