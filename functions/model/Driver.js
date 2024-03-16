@@ -10,13 +10,13 @@ const driverSchema = new mongoose.Schema({
   isActive: { type: Boolean, default: false },
   latitude: {
     type: Number,
-    required: true, 
+    required: false, 
     min: -90,
     max: 90,
   },
   longitude: {
     type: Number,
-    required: true, 
+    required: false, 
     min: -180,
     max: 180,
   },

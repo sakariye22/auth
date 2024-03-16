@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 async function registerDriver(req, res) {
   try {
     const { name, email, password, phoneNumber, licenseNumber, vehicle } = req.body;
+    console.log(req.body);
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -19,6 +20,8 @@ async function registerDriver(req, res) {
     });
 
     const savedDriver = await newDriver.save();
+
+
 
     res.status(201).json({ message: "Driver registered successfully", driver: savedDriver });
   } catch (error) {
