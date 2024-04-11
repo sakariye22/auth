@@ -51,18 +51,20 @@ const mongoDB = process.env.MONGODB_URL;
             const isValid = await bcrypt.compare(password, user.password);
             if (!isValid) return res.status(401).json({ message: 'Invalid password' });
     
+            // Generate a token with the user's ID and role
             const token = jwt.sign({ id: user.id, role: 'user' }, JWT_SECRET, { expiresIn: '1h' });
     
-            res.json({ message: 'Authentication successful', token });
+            // Include the user's name in the response. Assuming the user's name is stored in `user.name`
+            res.json({
+                message: 'Authentication successful',
+                token: token,
+                userName: user.name // Include this line to send the user's name in the response
+            });
         } catch (error) {
             console.error("Error in loginUser:", error);
             res.status(500).json({ message: "Error logging in user", error: error.message });
         }
     };
-    
-    async function protectedUser(req, res) {
-        res.json('Hello World');
-    }
     
 
 module.exports = { registerUser , loginUser , protectedUser};
