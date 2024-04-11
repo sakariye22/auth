@@ -5,7 +5,7 @@ const { authenticateToken, tokenBlacklist} = require ('../middlewware/authentica
 
 const {registerDriver,loginDriver, protectedDriver} = require ('../controllers/driverController.js');
 
-const {registerUser, loginUser, protectedUser} = require ('../controllers/userController.js');
+const {registerUser, loginUser } = require ('../controllers/userController.js');
 
 
 
@@ -17,7 +17,7 @@ router.post ('/register/user',registerUser);
 
 router.post ('/login/user',loginUser);
 
-router.get ('/pruser', authenticateToken, protectedUser);
+//router.get ('/pruser', authenticateToken, protectedUser);
 
 
 module.exports = router;

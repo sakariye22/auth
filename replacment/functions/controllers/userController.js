@@ -67,4 +67,4 @@ const mongoDB = process.env.MONGODB_URL;
     };
     
 
-module.exports = { registerUser , loginUser , protectedUser};
+module.exports = { registerUser , loginUser };
